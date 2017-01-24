@@ -15,7 +15,7 @@ public class LogSinkApplication {
 	}
 	
 	@ServiceActivator(inputChannel = Sink.INPUT)
-	public void logMessages(String message) {
-		System.out.println(message);
+	public void logMessages(Greeting message) {
+		System.out.println("Greeting is like :"+message.getGreeting());
 	}
 }
