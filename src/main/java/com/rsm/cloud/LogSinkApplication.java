@@ -16,6 +16,11 @@ public class LogSinkApplication {
 	
 	@ServiceActivator(inputChannel = Sink.INPUT)
 	public void logMessages(Greeting message) {
-		System.out.println("Greeting is like :"+message.getGreeting());
+		System.out.println("Greeting is  :"+message.getGreeting());
 	}
+	
+	/*@ServiceActivator(inputChannel = Sink.INPUT)
+	public void logMessages(String message) {
+		System.out.println("Greeting is64 :"+message);
+	}*/
 }
